@@ -13,4 +13,5 @@ endif;
 // get_sidebar();
 echo "<div> This is the category page </div>";
 get_footer();
+
 ?>
