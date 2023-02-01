@@ -55,3 +55,8 @@ if (!function_exists('myhellotheme_setup')) :
 	}
 endif; // myfirsttheme_setup
 add_action('after_setup_theme', 'myhellotheme_setup');
+
+// enqueue
+wp_enqueue_style('bootstrap_sytle', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css');
+wp_enqueue_script('bootstrap_script','https"//cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.j');
+wp_enqueue_style('sytle', get_stylesheet_uri('style.css'));

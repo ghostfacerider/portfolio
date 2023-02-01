@@ -13,12 +13,27 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <a href="<php echo get_home_url();?>"><?php echo get_bloginfo("name"); ?></a></h1>
-        <ul class="nav">
-            <?php
-            $menu = wp_get_nav_menu_items('Primary Menu');
-            foreach ($menu as $menu_item) {
-                echo '<li class="nav-item"><a href="' . $menu_item->url . '">' . $menu_item->title . '</a></li>';
-            }
-            ?>
-        </ul>
+
+
+<div class="container">
+    <header>
+        <div class="row">
+            <div class="col-md-6">
+                 <h1><a href="<php echo get_home_url();?>"><?php echo get_bloginfo("name"); ?></a></h1>
+            </div>
+
+            <div class="col-md-6">
+                <div class="d-flex justify-content-end">
+                    <ul class="nav ">
+                    <?php
+                        $menu = wp_get_nav_menu_items('Primary Menu');
+                        foreach ($menu as $menu_item) 
+                        {
+                            echo '<li class="nav-item"><a href="' . $menu_item->url . '" class="nav-link">' . $menu_item->title . '</a></li>';
+                        }
+                        ?>
+                    </ul>
+                </div>
+             </div>
+         </div>
+    <header>

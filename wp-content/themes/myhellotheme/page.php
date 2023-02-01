@@ -11,6 +11,5 @@ else :
 endif;
 
 // get_sidebar();
-echo "<div> This is the page page </div>";
 get_footer();
 ?>
