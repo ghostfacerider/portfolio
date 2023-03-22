@@ -72,5 +72,6 @@
   }
   ?>
 
+<?php echo "<div> This is the front page!!! </div>"; ?>
 <!-- get_sidebar(); -->
 <?php get_footer(); ?>
