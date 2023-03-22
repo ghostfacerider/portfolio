@@ -5,7 +5,7 @@
     <div class="d-flex justify-content-end">
       <h2><?php echo get_bloginfo("description"); ?></h2>
       <p>
-        <a href="#" class="btn btn-primary">Let's Talk</a>
+        <a href="<?php echo get_permalink( get_page_by_path('contact') )?>" class="btn btn-primary">Let's Talk</a>
       </p>
   </div>
 </div>
@@ -18,7 +18,8 @@
         $custom_logo_id = get_theme_mod('custom_logo');
         $image = wp_get_attachment_image_src($custom_logo_id, 'medium'); // change the size of the image
         $logo = $image[0];
-        echo '<img src="' . $logo . '" >';
+        // making the image a circle
+        echo '<img class="img-fluid round-circle" src="' . $logo . '" >';
       }
     ?>
   </div>
@@ -54,9 +55,10 @@
       //full, large, medium, small thumbnails 
       $url_thumbnail = get_the_post_thumbnail_url($fp->ID, 'medium'); //change the size of the image 
       $excerpt = get_the_excerpt($fp->ID);
+      // to get the  hyperlink
       $url_post = get_permalink($fp->ID);
       $title = $fp->post_title;
-      $date = $fp->post_date;
+      $date = get_the_date('F j, Y', $fp->ID);
 
       //creating a link, displaying the title, date, and excerpt
       echo '<img src="' . $url_thumbnail . '" class="img-fluid"><br>';
