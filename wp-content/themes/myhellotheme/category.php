@@ -15,15 +15,9 @@ if (have_posts()) :
     $url_thumbnail = get_the_post_thumbnail_url($fp->ID, 'medium'); //change the size of the image 
 
 
-<<<<<<< HEAD
     echo'<div class="row"><div class="col-md-3">';
     echo '<img src="' . $url_thumbnail . '" class="img-fluid"><br>';
     echo'<h3><a href="'.$url_post.'">'.$title.'</a></h3>';
-=======
-    echo '<div class="row"><div class="col-md-3">';  
-    echo '<img src="' . $url_thumbnail . '" class="img-fluid"></div><div class="col-md-9">';
-    echo'<h3><a href="'.$url_post.'" class="img-fluid">'.$title.'</a></h3>';
->>>>>>> f5af9ba34779e3b2fa8d7c65532f57ee3699b05d
     echo $excerpt;
     echo '</div><?div>';
         

@@ -1,0 +1,20 @@
+{
+    "scripts": {
+        
+        "phpcs": "phpcs",
+        "phpcsi": "phpcs -i",
+        "phpcbf": "phpcbf",
+        "phpcs-wp": [
+            "phpcs --standard=WordPress,WordPress-Extra,WordPress-Docs,WordPress-Core"
+          ],
+          "phpcbf-wp": [
+            "phpcbf --standard=WordPress,WordPress-Extra,WordPress-Docs,WordPress-Core"
+          ]
+      },
+    "require-dev": {
+        "phpcompatibility/php-compatibility": "*",
+        "phpcompatibility/phpcompatibility-wp": "*",
+        "sirbrillig/phpcs-variable-analysis": "*",
+        "wp-coding-standards/wpcs": "*"
+    }
+}

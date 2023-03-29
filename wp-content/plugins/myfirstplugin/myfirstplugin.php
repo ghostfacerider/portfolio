@@ -5,13 +5,10 @@ Description: This is my firsy wordPress plugin.
 Author: Gendy
 Version: 1.0
 
- */
+*/
 
-/**
- * My Action
- *
- *
- */
+// Action
+
 // The callback function
 function myfirstplugin_action_say_hello()
 {
@@ -21,13 +18,14 @@ function myfirstplugin_action_say_hello()
     }
 }
 // Register the action hook
-add_action('wp', 'myfirstplugin_action_say_hello');
+add_action(/* hook*/'wp', /* callback*/ 'myfirstplugin_action_say_hello');
 
 /**
  * My Filter
  */
 
 // The callback function
+//display author profile
 function myfirstplugin_filter_title($title)
 {
     $new_title = strtoupper($title);

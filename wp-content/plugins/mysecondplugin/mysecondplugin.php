@@ -33,7 +33,7 @@ function myfirstplugin_filter_title($title)
     $new_title = strtoupper($title);
 
     if (is_page()) {
-        $title = strtoupper($title);
+        $title = 'style="font-style: italic"'($title);
     }
     return $title;
 }
