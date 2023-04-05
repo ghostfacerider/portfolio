@@ -37,15 +37,3 @@ function myfirstplugin_filter_title($title)
 }
 // Register the filter hook
 add_filter('the_title', 'myfirstplugin_filter_title');
-
-/**
- * my Short code
- */
-
-// The callback function
-function nscc_shortcode($atts = [], $content = null)
-{
-    $content = "Hello from NSCC!";
-    return $content;
-}
-add_shortcode('nscc', 'nscc_shortcode');
